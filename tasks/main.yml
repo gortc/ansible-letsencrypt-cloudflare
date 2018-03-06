@@ -89,6 +89,7 @@
     dest: "{{ certificate_directory + '/' + crt_filename }}"
     account_email: "{{ letsencrypt_email }}"
     remaining_days: "{{ certificate_remaining_days }}"
+    agreement: "{{ letsencrypt_agreement }}"
   register: letsencrypt_challenge
   tags:
     - web-api

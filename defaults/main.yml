@@ -24,7 +24,7 @@ letsencrypt_key_directory: /etc/ssl/lets_encrypt
 letsencrypt_key_filename: letsencrypt_account.key
 letsencrypt_production: no
 letsencrypt_acme_directory: "{{ 'https://acme-v01.api.letsencrypt.org/directory' if letsencrypt_production else 'https://acme-staging.api.letsencrypt.org/directory' }}"
-
+letsencrypt_agreement: "https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf"
 
 include_intermediate: no
 intermediate_filename: "{{ certificate_common_name }}.intermediate.crt"
